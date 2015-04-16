@@ -1,0 +1,10 @@
+{% if seferov_blog_config.widgets.facebook is defined and seferov_blog_config.widgets.facebook.username is defined and seferov_blog_config.widgets.facebook.name is defined %}
+<div class="fb-page" data-href="https://www.facebook.com/{{ seferov_blog_config.widgets.facebook.username }}" data-hide-cover="false" data-show-facepile="true"
+     data-show-posts="false">
+    <div class="fb-xfbml-parse-ignore">
+        <blockquote cite="https://www.facebook.com/{{ seferov_blog_config.widgets.facebook.username }}">
+            <a href="https://www.facebook.com/{{ seferov_blog_config.widgets.facebook.username }}">{{ seferov_blog_config.widgets.facebook.name }}</a>
+        </blockquote>
+    </div>
+</div>
+{% endif %}

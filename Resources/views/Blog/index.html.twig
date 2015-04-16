@@ -1,0 +1,34 @@
+{% extends seferov_blog_config.layout %}
+
+{% block content %}
+    {% for post in posts %}
+        {% set url = url('seferov_blog_show', {
+            'titleSlug':post.titleSlug,
+            'month':post.month,
+            'year':post.year
+        }) %}
+        <div class="post">
+            <h2 class="post-title">
+                <a href="{{ url }}"><strong>{{ post.title }}</strong></a>
+            </h2>
+            <div class="post-details">
+                <span class="post-author">{{ post.author }}</span>
+                <span class="post-date">{{ post.createdAt|date('d-m-Y') }}</span>
+            </div>
+            <div class="post-excerpt">
+                {{ post.post|markdown|striptags|excerpt(800) }}
+            </div>
+            <a class="read-more" href="{{ url }}" title="{{ "post.read-more"|trans }}">
+                {{ "post.read-more"|trans }} &#8594;
+            </a>
+        </div>
+    {% endfor %}
+
+    {% if posts|length != 0 %}
+        <div class="pagination">
+            {{ pagerfanta(posts, 'twitter_bootstrap3') }}
+        </div>
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}

@@ -1,0 +1,27 @@
+{
+  "name": "seferov/BlogBundle",
+  "type": "symfony-bundle",
+  "description": "Symfony2 Blog Bundle",
+  "keywords": ["symfony2", "blog", "news"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Farhad Safarov",
+      "homepage": "http://ferhad.in"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4",
+    "symfony/symfony": ">=2.1",
+    "white-october/pagerfanta-bundle": "1.0.2",
+    "whiteoctober/breadcrumbs-bundle": "1.1.0",
+    "sonata-project/seo-bundle": "~2.0.0",
+    "knplabs/knp-markdown-bundle": "~1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Seferov\\BlogBundle\\": ""
+    }
+  }
+}

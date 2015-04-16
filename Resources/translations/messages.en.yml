@@ -1,0 +1,6 @@
+common:
+  blog: Blog
+  all-rights-reserved: All rights reserved
+
+post:
+  read-more: Read more

@@ -1,0 +1,47 @@
+.post {
+    margin: 10px 0;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 20px
+}
+
+.post .read-more {
+    color: #55a2aa;
+    text-decoration: none
+}
+
+.post .read-more:hover {
+    text-decoration: underline
+}
+
+.post-details {
+    width: 100%;
+    margin: 5px 0
+}
+
+.post-details .post-author {
+    font-size: 11px
+}
+
+.post-details .post-date {
+    color: #999;
+    font-size: 11px
+}
+
+.post-title a {
+    color: #333 !important;
+    text-decoration: none
+}
+
+.post-title:hover {
+    color: #369;
+    text-decoration: underline
+}
+
+.post-details, .post-author {
+    font-size: 11px
+}
+
+.post-details, .post-date {
+    color: #999;
+    font-size: 11px
+}
