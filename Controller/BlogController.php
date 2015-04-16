@@ -30,6 +30,10 @@ class BlogController extends Controller
 
         $posts = $this->getDoctrine()->getManager()->getRepository('SeferovBlogBundle:Post')->getListPosts($page);
 
+        if (!$posts) {
+            throw $this->createNotFoundException();
+        }
+
         // SEO
         $this->get('sonata.seo.page.default')->addTitle(ucfirst($this->get('translator')->trans('blog.menu')));
 
