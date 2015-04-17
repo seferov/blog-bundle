@@ -16,6 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class BlogController
+ * @author Farhad Safarov <http://ferhad.in>
  * @package Seferov\BlogBundle\Controller
  */
 class BlogController extends Controller
@@ -28,7 +29,10 @@ class BlogController extends Controller
     {
         $page = is_numeric($request->query->get('page')) ? $request->query->get('page') : 1;
 
-        $posts = $this->getDoctrine()->getManager()->getRepository('SeferovBlogBundle:Post')->getListPosts($page);
+        $posts = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('SeferovBlogBundle:Post')
+            ->getListPosts($page);
 
         if (!$posts) {
             throw $this->createNotFoundException();
@@ -53,8 +57,9 @@ class BlogController extends Controller
      */
     public function showAction($year, $month, $titleSlug)
     {
-        /** @var \Seferov\BlogBundle\Entity\Post $post */
-        $post = $this->getDoctrine()->getManager()->getRepository('SeferovBlogBundle:Post')->findOneBy([
+        /** @var \Doctrine\ORM\EntityManager $em */
+        $em = $this->getDoctrine()->getManager();
+        $post = $em->getRepository('SeferovBlogBundle:Post')->findOneBy([
             'year' => $year,
             'month' => $month,
             'title_slug' => $titleSlug
@@ -62,6 +67,21 @@ class BlogController extends Controller
 
         if (!$post) {
             throw $this->createNotFoundException();
+        }
+
+        // Redirect to the original post if there is any
+        if ($post->getRedirectTo()) {
+            $originalPost = $em->getRepository('SeferovBlogBundle:Post')->find($post->getRedirectTo());
+
+            if (!$originalPost) {
+                throw $this->createNotFoundException();
+            }
+
+            return $this->redirectToRoute('seferov_blog_show', [
+               'year' => $originalPost->getYear(),
+                'month' => $originalPost->getMonth(),
+                'titleSlug' => $originalPost->getTitleSlug()
+            ]);
         }
 
         // SEO

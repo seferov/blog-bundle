@@ -63,6 +63,11 @@ class Post
      */
     private $status;
 
+    /**
+     * @var integer
+     */
+    private $redirectTo;
+
 
     /**
      * Get id
@@ -78,6 +83,7 @@ class Post
      * Set title
      *
      * @param string $title
+     *
      * @return Post
      */
     public function setTitle($title)
@@ -98,9 +104,10 @@ class Post
     }
 
     /**
-     * Set title_slug
+     * Set titleSlug
      *
      * @param string $titleSlug
+     *
      * @return Post
      */
     public function setTitleSlug($titleSlug)
@@ -111,7 +118,7 @@ class Post
     }
 
     /**
-     * Get title_slug
+     * Get titleSlug
      *
      * @return string
      */
@@ -124,6 +131,7 @@ class Post
      * Set post
      *
      * @param string $post
+     *
      * @return Post
      */
     public function setPost($post)
@@ -144,9 +152,10 @@ class Post
     }
 
     /**
-     * Set created_at
+     * Set createdAt
      *
      * @param \DateTime $createdAt
+     *
      * @return Post
      */
     public function setCreatedAt($createdAt)
@@ -157,7 +166,7 @@ class Post
     }
 
     /**
-     * Get created_at
+     * Get createdAt
      *
      * @return \DateTime
      */
@@ -170,6 +179,7 @@ class Post
      * Set month
      *
      * @param string $month
+     *
      * @return Post
      */
     public function setMonth($month)
@@ -193,6 +203,7 @@ class Post
      * Set year
      *
      * @param integer $year
+     *
      * @return Post
      */
     public function setYear($year)
@@ -216,6 +227,7 @@ class Post
      * Set author
      *
      * @param string $author
+     *
      * @return Post
      */
     public function setAuthor($author)
@@ -239,6 +251,7 @@ class Post
      * Set status
      *
      * @param boolean $status
+     *
      * @return Post
      */
     public function setStatus($status)
@@ -256,5 +269,29 @@ class Post
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * Set redirectTo
+     *
+     * @param integer $redirectTo
+     *
+     * @return Post
+     */
+    public function setRedirectTo($redirectTo)
+    {
+        $this->redirectTo = $redirectTo;
+
+        return $this;
+    }
+
+    /**
+     * Get redirectTo
+     *
+     * @return integer
+     */
+    public function getRedirectTo()
+    {
+        return $this->redirectTo;
     }
 }

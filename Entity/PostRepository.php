@@ -29,6 +29,7 @@ class PostRepository extends EntityRepository
     public function getListPosts($page = 1)
     {
         $query = $this->createQueryBuilder('p')
+            ->where('p.redirectTo is null')
             ->orderBy('p.created_at', 'DESC')
             ->getQuery();
 
@@ -38,7 +39,6 @@ class PostRepository extends EntityRepository
         try {
             $posts->setCurrentPage($page);
         } catch(NotValidCurrentPageException $e) {
-            //throw new NotFoundHttpException();
             return false;
         }
 
