@@ -39,7 +39,7 @@ class BlogController extends Controller
         }
 
         // SEO
-        $this->get('sonata.seo.page.default')->addTitle(ucfirst($this->get('translator')->trans('blog.menu')));
+        $this->get('sonata.seo.page.default')->addTitle(ucfirst($this->get('translator')->trans('common.blog')));
 
         $this->get("white_october_breadcrumbs")
             ->addRouteItem('blog.menu', 'seferov_blog_homepage');
