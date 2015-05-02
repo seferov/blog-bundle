@@ -81,7 +81,7 @@ class BlogController extends Controller
                'year' => $originalPost->getYear(),
                 'month' => $originalPost->getMonth(),
                 'titleSlug' => $originalPost->getTitleSlug()
-            ]);
+            ], 301);
         }
 
         // SEO
