@@ -1,0 +1,12 @@
+Seferov\BlogBundle\Entity\WidgetContent:
+  type: entity
+  table: seferov_blog_widget_content
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    content:    { type: text }
+    status:     { type: boolean }
+  lifecycleCallbacks: {  }
