@@ -1,9 +1,9 @@
 seferov_blog_homepage:
-    pattern:  /
-    defaults: { _controller: SeferovBlogBundle:Blog:index }
+    path:       /
+    defaults:   { _controller: SeferovBlogBundle:Blog:index }
 
 seferov_blog_show:
-    pattern:  /{year}/{month}/{titleSlug}/
-    defaults: { _controller: SeferovBlogBundle:Blog:show }
+    path:       /{year}/{month}/{titleSlug}/
+    defaults:   { _controller: SeferovBlogBundle:Blog:show }
     requirements:
         year: \d+
