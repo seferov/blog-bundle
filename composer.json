@@ -1,5 +1,5 @@
 {
-  "name": "seferov/BlogBundle",
+  "name": "seferov/blog-bundle",
   "type": "symfony-bundle",
   "description": "Symfony2 Blog Bundle",
   "keywords": ["symfony2", "blog", "news"],
