@@ -27,9 +27,10 @@ public function registerBundles()
 }
 ```
 
-Add routing:
+Import routing:
 
 ```yml
+# app/config/routing.yml
 seferov_blog:
     resource: "@SeferovBlogBundle/Resources/config/routing.yml"
     prefix:   /blog
@@ -45,6 +46,7 @@ Install assets:
 
 ## TODO
 
+- dashboard to compose posts!
 - remove tons of dependencies
 - write tests
 - release stable version
