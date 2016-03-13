@@ -3,7 +3,7 @@
 /*
  * This file is part of the SeferovBlogBundle package.
  *
- * (c) Farhad Safarov <http://ferhad.in>
+ * (c) Farhad Safarov <http://farhadsafarov.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class BlogController
- * @author Farhad Safarov <http://ferhad.in>
+ * @author Farhad Safarov <http://farhadsafarov.com>
  * @package Seferov\BlogBundle\Controller
  */
 class BlogController extends Controller
@@ -53,11 +53,10 @@ class BlogController extends Controller
      * @param $year
      * @param $month
      * @param $titleSlug
-     * @return \Symfony\Component\HttpFoundation\Response|\Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     * @return \Symfony\Component\HttpFoundation\Response|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function showAction($year, $month, $titleSlug)
     {
-        /** @var \Doctrine\ORM\EntityManager $em */
         $em = $this->getDoctrine()->getManager();
         $post = $em->getRepository('SeferovBlogBundle:Post')->findOneBy([
             'year' => $year,

@@ -3,7 +3,7 @@
 /*
  * This file is part of the SeferovBlogBundle package.
  *
- * (c) Farhad Safarov <http://ferhad.in>
+ * (c) Farhad Safarov <http://farhadsafarov.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,9 +12,8 @@
 namespace Seferov\BlogBundle\Twig;
 
 /**
- * Class SeferovTwigExtension
- * @package Seferov\AppBundle\Twig
- * @author Farhad Safarov <ferhad@azerdict.com>
+ * Class SeferovBlogTwigExtension
+ * @package Seferov\BlogBundle\Twig
  */
 class SeferovBlogTwigExtension extends \Twig_Extension
 {

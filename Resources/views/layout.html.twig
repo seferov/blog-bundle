@@ -5,6 +5,7 @@
     {{ sonata_seo_metadatas() }}
     {{ sonata_seo_lang_alternates() }}
     {{ sonata_seo_title() }}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('bundles/seferovblog/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('bundles/seferovblog/css/style.css') }}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,7 +31,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="pull-left" href="/">
-                            <img alt="" id="logo" width="200" src="{{ asset('img/logo.jpg') }}">
+                            <h1>Blog</h1>
                         </a>
                     </div>
                 </div>
@@ -67,11 +68,11 @@
     </div>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/ie10-viewport-bug-workaround.js') }}"></script>
 {% block js %}{% endblock %}
-{% include '@SeferovBlog/Widget/facebookJs.html.twig' %}
-
+{% if seferov_blog_config.widgets.facebook.app_id is defined %}
+    {% include '@SeferovBlog/Widget/facebookJs.html.twig' %}
+{% endif %}
 </body>
 </html>
