@@ -31,7 +31,7 @@ class PostRepository extends EntityRepository
     {
         $query = $this->createQueryBuilder('p')
             ->where('p.redirectTo is null')
-            ->orderBy('p.created_at', 'DESC')
+            ->orderBy('p.id', 'DESC')
             ->getQuery();
 
         $posts = new Pagerfanta(new DoctrineORMAdapter($query));
@@ -44,5 +44,19 @@ class PostRepository extends EntityRepository
         }
 
         return $posts;
+    }
+
+    /**
+     * @param int $limit
+     * @return array
+     */
+    public function getPosts($limit = 5)
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.redirectTo is null')
+            ->orderBy('p.id', 'desc')
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
     }
 }

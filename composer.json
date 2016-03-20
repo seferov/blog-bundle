@@ -1,8 +1,8 @@
 {
   "name": "seferov/blog-bundle",
   "type": "symfony-bundle",
-  "description": "Symfony2 Blog Bundle",
-  "keywords": ["symfony2", "blog", "news"],
+  "description": "Symfony Blog Bundle",
+  "keywords": ["symfony", "blog", "news"],
   "license": "MIT",
   "authors": [
     {

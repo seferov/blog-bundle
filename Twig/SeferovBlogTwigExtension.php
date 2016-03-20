@@ -11,13 +11,12 @@
 
 namespace Seferov\BlogBundle\Twig;
 
-use Twig_Extension_GlobalsInterface;
-
 /**
  * Class SeferovBlogTwigExtension
  * @package Seferov\BlogBundle\Twig
  */
-class SeferovBlogTwigExtension extends \Twig_Extension implements Twig_Extension_GlobalsInterface
+
+class SeferovBlogTwigExtension extends \Twig_Extension
 {
     /**
      * @var array

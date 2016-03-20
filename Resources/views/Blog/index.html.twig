@@ -3,9 +3,9 @@
 {% block content %}
     {% for post in posts %}
         {% set url = url('seferov_blog_show', {
-            'titleSlug':post.titleSlug,
-            'month':post.month,
-            'year':post.year
+            'titleSlug': post.titleSlug,
+            'month': post.month,
+            'year': post.year
         }) %}
         <div class="post">
             <h2 class="post-title">
