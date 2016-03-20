@@ -59,6 +59,11 @@ class Post
     private $author;
 
     /**
+     * @var string
+     */
+    private $coverImage;
+
+    /**
      * @var boolean
      */
     private $status;
@@ -293,5 +298,21 @@ class Post
     public function getRedirectTo()
     {
         return $this->redirectTo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCoverImage()
+    {
+        return $this->coverImage;
+    }
+
+    /**
+     * @param string $coverImage
+     */
+    public function setCoverImage($coverImage)
+    {
+        $this->coverImage = $coverImage;
     }
 }

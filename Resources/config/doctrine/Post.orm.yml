@@ -14,7 +14,8 @@ Seferov\BlogBundle\Entity\Post:
     created_at: { type: datetime }
     month:      { type: string, length: 2 }
     year:       { type: integer }
-    author:     { type: string }
+    author:     { type: string, length: 100 }
+    coverImage: { type: string, length: 255, nullable: true }
     status:     { type: boolean }
     redirectTo: { type: integer, column: redirect_to, nullable: true }
   lifecycleCallbacks: {  }
