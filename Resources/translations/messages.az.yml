@@ -1,0 +1,6 @@
+common:
+  blog: Blog
+  all-rights-reserved: Bütün haqları qorunur
+
+post:
+  read-more: Davamını oxu

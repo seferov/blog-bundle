@@ -1,0 +1,28 @@
+{% extends seferov_blog_config.layout %}
+
+{% block content %}
+    <div class="post" itemscope>
+        <h1 class="post-title" itemprop="name headline">
+            <a href="{{ url('seferov_blog_show', { 'titleSlug':post.titleSlug, 'month':post.month, 'year':post.year }) }}">
+                {{ post.title }}
+            </a>
+        </h1>
+
+        <div class="post-details">
+            <span class="post-author" itemprop="author">
+                <span itemprop="name">{{ post.author }}</span>
+            </span>
+            <span class="post-date" itemprop="datePublished">{{ post.createdAt|date('d-m-Y') }}</span>
+        </div>
+
+        <div class="post-content" itemprop="articleBody">
+            {{ post.post|markdown|raw }}
+        </div>
+    </div>
+
+    <br class="clearfix" />
+
+    <div class="post-comments">
+        {% include '@SeferovBlog/Widget/disqus.html.twig' %}
+    </div>
+{% endblock %}

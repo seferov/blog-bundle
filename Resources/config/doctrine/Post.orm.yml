@@ -1,0 +1,20 @@
+Seferov\BlogBundle\Entity\Post:
+  type: entity
+  repositoryClass: Seferov\BlogBundle\Entity\PostRepository
+  table: seferov_blog_post
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    title:      { type: string, length: 255 }
+    title_slug: { type: string, length: 255 }
+    post:       { type: text }
+    created_at: { type: datetime }
+    month:      { type: string, length: 2 }
+    year:       { type: integer }
+    author:     { type: string }
+    status:     { type: boolean }
+    redirectTo: { type: integer, column: redirect_to, nullable: true }
+  lifecycleCallbacks: {  }

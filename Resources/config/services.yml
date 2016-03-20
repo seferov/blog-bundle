@@ -1,0 +1,6 @@
+services:
+    seferov_blog.twig_extension:
+        class: Seferov\BlogBundle\Twig\SeferovBlogTwigExtension
+        arguments: [%seferov_blog_config%]
+        tags:
+            - { name: twig.extension }
