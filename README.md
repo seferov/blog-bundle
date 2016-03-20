@@ -56,5 +56,5 @@ Install assets:
 
 ## Examples
 
-On production:
 - [azerdict blog](https://azerdict.com/blog/)
+- [Farhad Safarov](https://farhadsafarov.com/blog/)
