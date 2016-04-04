@@ -24,6 +24,7 @@ class PostType extends AbstractType
             ->add('title')
             ->add('post', TextareaType::class)
             ->add('author')
+            ->add('coverImage')
             ->add('Save', SubmitType::class)
         ;
     }

@@ -33,8 +33,8 @@ security:
             anonymous: ~
 
     access_control:
-        - { path: ^/blog/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: "%http_protocol%" }
-        - { path: ^/blog/admin, roles: ROLE_ADMIN, requires_channel: "%http_protocol%" }
-        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: "%http_protocol%" }
+        - { path: ^/blog/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/blog/admin, roles: ROLE_ADMIN }
+        # ...
 
 ```
