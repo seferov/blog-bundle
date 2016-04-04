@@ -1,0 +1,14 @@
+<html>
+<head>
+    {% block head %}{% endblock %}
+</head>
+<body>
+<ul>
+    <li><a href="{{ url('seferov_blog_admin_posts') }}">Posts</a></li>
+    <li><a href="{{ url('seferov_blog_admin_add_post') }}">Add Post</a></li>
+    <li><a href="{{ url('seferov_blog_admin_logout') }}">Logout</a></li>
+</ul>
+
+{% block main %}{% endblock %}
+</body>
+</html>

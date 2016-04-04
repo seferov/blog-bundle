@@ -1,0 +1,28 @@
+seferov_blog_admin_index:
+    path:       /
+    defaults:   { _controller: SeferovBlogBundle:Admin/Blog:index }
+
+seferov_blog_admin_posts:
+    path:       /posts
+    defaults:   { _controller: SeferovBlogBundle:Admin/Blog:posts }
+
+seferov_blog_admin_add_post:
+    path:       /add-post
+    defaults:   { _controller: SeferovBlogBundle:Admin/Blog:addPost }
+
+seferov_blog_admin_edit_post:
+    path:       /edit-post/{id}
+    defaults:   { _controller: SeferovBlogBundle:Admin/Blog:editPost }
+
+# Security
+seferov_blog_admin_login:
+    path:       /login
+    defaults:   { _controller: SeferovBlogBundle:Admin/Security:login }
+
+seferov_blog_admin_login_check:
+    path:       /login_check
+    defaults:   { _controller: SeferovBlogBundle:Admin/Security:loginCheck }
+
+seferov_blog_admin_logout:
+    path:       /logout
+    defaults:   { _controller: SeferovBlogBundle:Admin/Security:logout }

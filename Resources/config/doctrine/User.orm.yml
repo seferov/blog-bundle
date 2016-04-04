@@ -1,0 +1,21 @@
+Seferov\BlogBundle\Entity\User:
+    type: entity
+    table: seferov_blog_user
+    repositoryClass: Seferov\BlogBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: '64'
+            unique: true
+        password:
+            type: string
+            length: '60'
+        roles:
+            type: array
+    lifecycleCallbacks: {  }

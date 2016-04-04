@@ -1,9 +1,6 @@
-seferov_blog_homepage:
-    path:       /
-    defaults:   { _controller: SeferovBlogBundle:Blog:index }
+seferov_blog_blog:
+    resource: "@SeferovBlogBundle/Resources/config/routing/blog.yml"
 
-seferov_blog_show:
-    path:       /{year}/{month}/{titleSlug}/
-    defaults:   { _controller: SeferovBlogBundle:Blog:show }
-    requirements:
-        year: \d+
+seferov_blog_admin:
+    prefix:   /admin
+    resource: "@SeferovBlogBundle/Resources/config/routing/admin.yml"

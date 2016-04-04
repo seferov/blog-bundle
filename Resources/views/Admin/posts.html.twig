@@ -1,0 +1,11 @@
+{% extends '@SeferovBlog/Admin/layout.html.twig' %}
+
+{% block main %}
+    <ul>
+    {% for post in posts %}
+        <li>
+            <a href="{{ url('seferov_blog_admin_edit_post', {id: post.id}) }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

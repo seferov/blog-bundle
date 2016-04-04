@@ -72,8 +72,7 @@ class Post
      * @var integer
      */
     private $redirectTo;
-
-
+    
     /**
      * Get id
      *

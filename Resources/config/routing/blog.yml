@@ -1,0 +1,9 @@
+seferov_blog_homepage:
+    path:       /
+    defaults:   { _controller: SeferovBlogBundle:Blog:index }
+
+seferov_blog_show:
+    path:       /{year}/{month}/{titleSlug}/
+    defaults:   { _controller: SeferovBlogBundle:Blog:show }
+    requirements:
+        year: \d+
