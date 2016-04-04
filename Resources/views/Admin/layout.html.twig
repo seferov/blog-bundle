@@ -1,6 +1,7 @@
 <html>
 <head>
     {% block head %}{% endblock %}
+    <title>Blog Admin</title>
 </head>
 <body>
 <ul>
@@ -10,5 +11,19 @@
 </ul>
 
 {% block main %}{% endblock %}
+<script src="{{ asset('bundles/seferovblog/js/ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace('post_post', {
+        toolbarGroups: [
+            {name: 'tools'},
+            {name: 'links'},
+            {name: 'basicstyles', groups: ['basicstyles', 'cleanup']},
+            {name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
+            {name: 'styles'},
+            {name: 'others'}
+        ],
+        extraPlugins: 'markdown'
+    });
+</script>
 </body>
 </html>
