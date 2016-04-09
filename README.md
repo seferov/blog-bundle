@@ -46,7 +46,7 @@ Install assets:
 
 ## TODO
 
-- dashboard to compose posts!
+- admin template
 - remove tons of dependencies
 - write tests
 - release stable version
@@ -58,3 +58,4 @@ Install assets:
 
 - [azerdict blog](https://azerdict.com/blog/)
 - [Farhad Safarov](https://farhadsafarov.com/blog/)
+- [Bebek.tv](https://bebek.tv/blog/)
