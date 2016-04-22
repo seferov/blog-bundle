@@ -1,5 +1,5 @@
 {% if seferov_blog_config.widgets.facebook.comments is defined %}
-    <div class="fb-comments" data-href="https://bebek.tv"
+    <div class="fb-comments" data-href="{{ app.request.uri }}"
          data-numposts="{{ seferov_blog_config.widgets.facebook.comments.numposts }}"
          {% if seferov_blog_config.widgets.facebook.comments.width is defined -%}
          data-width="{{ seferov_blog_config.widgets.facebook.comments.width }}"{% endif %}>
