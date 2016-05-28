@@ -59,7 +59,9 @@ class SeferovBlogTwigExtension extends \Twig_Extension
     public function excerptFilter($text, $limit = 100)
     {
         // Limit content with numbers to create an excerpt
-        return mb_substr($text, 0, $limit, 'UTF-8');
+        $limited = mb_substr($text, 0, $limit, 'UTF-8');
+
+        return html_entity_decode($limited, ENT_COMPAT, 'UTF-8');
     }
 
     /**
